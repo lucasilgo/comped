@@ -1,1 +1,84 @@
-<h1>Cadastrar Paciente</h1>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    
+    <body>
+        <h1>Cadastrar Paciente</h1>
+        <form action="." method="post">
+            {% csrf_token %}
+            <p>
+                <label for="id_nome">Nome:</label>
+                <input id="id_nome" type="text" name="nome" maxlength="100">
+            </p>
+            <p>
+                <label for="id_cpf">CPF:</label>
+                <input id="id_cpf" type="text" name="cpf" maxlength="11">
+            </p>
+            <p>
+                <label for="id_nascimento">Data de Nascimento:</label>
+                <input id="id_nascimento" type="date" name="nascimento">
+            </p>
+            <p>
+                <label for="id_convenio">Convênio:</label>
+                <input id="id_convenio" type="text" name="convenio">
+            </p>
+            <p>
+                <label for="id_esporte">Pratica Esporte?</label>
+                <input id="id_esporte" type="radio" name="esporte" value="Sim">Sim
+                <input id="id_esporte" type="radio" name="esporte" value="Não">Não
+            </p>
+            <p>
+                <label for="id_profissao">Profissão:</label>
+                <input id="id_profissao" type="text" name="profissao">
+            </p>
+            <p>
+                <label for="id_sexo">Sexo:</label>
+                <input id="id_sexo" type="radio" name="sexo" value="Masculino">Masculino
+                <input id="id_sexo" type="radio" name="sexo" value="Feminino">Feminino
+            </p>
+            <p>
+                <label for="id_email">Email:</label>
+                <input id="id_email" type="email" name="email">
+            </p>
+            <p>
+                <label for="id_tel_fixo">Telefone Fixo:</label>
+                <input id="id_tel_fixo" type="text" name="tel_fixo">
+            </p>
+            <p>
+                <label for="id_tel_cel">Telefone Celular:</label>
+                <input id="id_tel_cel" type="text" name="tel_cel">
+            </p>
+            <hr>
+            <p><strong>Endereço</strong></p>
+            <p>
+                <label for="id_logradouro">Logradouro:</label>
+                <input id="id_logradouro" type="text" name="logradouro">
+            </p>
+            <p>
+                <label for="id_numero">Número:</label>
+                <input id="id_numero" type="text" name="numero">
+            </p>
+            <p>
+                <label for="id_cidade">Cidade:</label>
+                <input id="id_cidade" type="text" name="cidade">
+            </p>
+            <p>
+                <label for="id_bairro">Bairro:</label>
+                <input id="id_bairro" type="text" name="bairro">
+            </p>
+            <p>
+                <label for="id_numero">UF:</label>
+                <select>
+                    <option value="ES">ES</option>
+                </select>
+            </p>
+            <p>
+                <label for="id_cep">CEP:</label>
+                <input id="id_cep" type="text" name="cep">
+            </p>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </body>
+</html>
